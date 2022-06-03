@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 validation</title>
+		<style>
+		section{
+			height:550px;
+			width:600px;
+			background-color:#ffffff;
+			border:2px solid black;
+			padding:10px;
+			margin:20px 0px 0px 50px;
+		}
+		
+		label{
+			font-size:18px;
+			margin:0px 0px 0px 40px;
+			}
+
+		input[type="text"],[type="email"],[type="password"],[type="date"],[type="tel"],select{
+			height:30px;
+			padding:0px 0px 0px 15px;
+			border:2px solid #FACA27;
+			}
+			
+			input[type="text"]:focus,[type="email"]:focus,[type="password"]:focus,[type="date"]:focus,[type="tel"]:focus,select:focus{
+				background-color:#f5f5ef;
+				outline:none;
+				box-shadow: 0px 0px 1px 1px orange;
+				font-size:15px;
+			}
+
+				
+		input[type="submit"]{
+			padding:10px;
+			font-size:15px;
+			font-weight:bold;
+			background-color:orange;
+			border:none;
+			border-radius:20px;
+			color:white;
+			margin:20px 0px 0px 50px;
+		}
+		input[type="submit"]:hover{
+			background-color:#F78B11;
+			color:white;
+			cursor:pointer;
+			border:2px solid #B07B11;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<section>
+		<h1>Testimonial Form </h1>
+		<form name="myForm" method="POST" action="">
+			<label>Name</label>
+			<input type="text" name="name" size="49" placeholder="Enter your name" pattern="[A-Za-z]{3,20}" title="Name should contain minimum 3 letters. e.g. Ram" required> </input>
+			<br></br>
+			<label>Email</label>
+			<input type="email" name="email" size="49" placeholder="abc@gmail.com" required> </input>
+			<br></br>
+			<label>Password</label>
+			<input type="password" name="password" size="45" placeholder="Enter password" minlength="8" maxlength="15" required> </input>
+			<br></br>
+			<label>Mobile No.</label>
+			<input type="tel" name="mobile" size="43" placeholder="Enter mobile number" pattern="[0-9]{5}-[0-9]{5}" title="Number should be E.g. 78965-78547" required> </input>
+			<br></br>
+			<label>Date of birth</label>
+			<input type="date" name="dob"  min="2012-01-01" max="2022-12-31" required> </input>
+			<br></br>
+			<label>Country</label>
+			<select name="country" id="country"required>
+			  <option value="">Choose your country</option>
+			  <option value="India">India</option>
+			  <option value="UK">UK</option>
+			  <option value="USA">USA</option>
+			  <option value="Australia">Australia</option>
+			</select>
+			<br></br>
+			<label>Country code:</label>
+			<input type="text" name="country_code" pattern="[0-9]{3}" title="Three digit country code">
+			<br></br>
+			<label>City pincode</label>
+			<input type="text" size="40" pattern="^[0-9]{6}$" title="Enter Valid Pin Code" required> </input>
+			<br></br>
+			<input type="submit" value="Submit"></input>
+		</form>
+		</section>
+	</body>
+</html>
+
+
+
